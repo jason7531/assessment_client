@@ -14,7 +14,7 @@ export async function getAllProducts() {
 
 export async function getCategory(category) {
   const response = await fetch(`${DOMAIN}/products/category`, {
-    method: "GET",
+    method: "POST",
     body: JSON.stringify({ category: category }),
     headers: {
       "Content-Type": "application/json",
