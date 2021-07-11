@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700,500&display=swap');
+
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.logo{
+  transform: scale(1);
+}
+
+.sb{
+  transform: translateX(-10px);
+  width: "500px";
+}
+
+.bg-custom{
+  background-color: blue;
+  color: white;
+}
+ .nav-link{
+   color: white !important;
+   padding-right: 30px !important;
+ }
+ .navbar-brand{
+
+   font-size: 40px;
+ }
+ 
+ .btnc{
+   width: 100% !important;
+ }
+.cart-product-image{
+  max-width: 100px;
+  border-radius: 10px;
+}
+.proceed-checkout-btn{
+  float: right;
+}
+.pp-btn{
+  width: 100%;
+}
