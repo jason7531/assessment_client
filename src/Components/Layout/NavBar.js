@@ -23,17 +23,13 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarToggler">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link
-                  href="/product"
-                  className="nav-link active"
-                  aria-current="page"
-                >
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 <Link
-                  href="/category"
+                  to="/category/?category=Grocery"
                   className="nav-link active"
                   aria-current="page"
                 >
@@ -42,7 +38,7 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href="/category"
+                  to="/category/?category=Sports"
                   className="nav-link active"
                   aria-current="page"
                 >
@@ -51,7 +47,7 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href="/category"
+                  to="/category/?category=Electronics"
                   className="nav-link active"
                   aria-current="page"
                 >
@@ -60,7 +56,7 @@ const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  href="/category"
+                  to="/category/?category=Clothing"
                   className="nav-link active"
                   aria-current="page"
                 >

@@ -13,8 +13,9 @@ function App() {
       <Switch>
         <Route path="/" exact component={HomeComponent} />
         <Route path="/cart" exact component={Cart} />
-        <Route path="/product" exact component={ProductPage} />
-        <Route path="/category" exact component={Category} />
+        <Route path="/product/:productId" component={ProductPage} />
+
+        <Route path="/category" component={Category} />
       </Switch>
     </BrowserRouter>
   );

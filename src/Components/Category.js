@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./Home/ProductCard";
+import { useLocation } from "react-router-dom";
 
 const Index = () => {
   const [products, setProducts] = useState([]);
-  const getProducts = (category) => {
-    fetch("https://jasonassessment.herokuapp.com/api/v1/category", {
+  const location = useLocation();
+  const search = location.search;
+  const query = new URLSearchParams(search);
+  const category = query.get("category");
+  const getProducts = () => {
+    fetch("https://jasonassessment.herokuapp.com/api/v1/product/category", {
       method: "POST",
       body: JSON.stringify({ category: category }),
       headers: {
@@ -16,7 +21,7 @@ const Index = () => {
   };
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [category]);
 
   return (
     <>

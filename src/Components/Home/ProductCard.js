@@ -5,6 +5,7 @@ import { useHistory } from "react-router";
 const ProductCard = (props) => {
   // const history = useHistory()
   const link = "/product/" + props.id;
+  const id = props.id;
   const addToCartHandler = async (id) => {
     const response = await fetch(
       "https://jasonassessment.herokuapp.com/api/v1/cart/add",
@@ -32,13 +33,13 @@ const ProductCard = (props) => {
             <h3 class="card-text">{props.price}</h3>
             <div className="row">
               <div className="col-md-6">
-                <Link href={link} class="btn btn-primary btnc">
+                <Link to={`/products/${props.id}`} class="btn btn-primary btnc">
                   <i class="fas fa-eye"></i> View
                 </Link>
               </div>
               <div className="col-md-6">
                 <button
-                  onClick={addToCartHandler.bind(props.id)}
+                  onClick={addToCartHandler}
                   href="/ca"
                   class="btn btn-danger btnc"
                 >
